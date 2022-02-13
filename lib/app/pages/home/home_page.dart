@@ -13,7 +13,7 @@ class HomePage extends StatelessWidget {
         padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 32),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
-          children: const [HeaderWithProfile()],
+          children: const [HomeHeaderWithProfile()],
         ),
       )),
     );

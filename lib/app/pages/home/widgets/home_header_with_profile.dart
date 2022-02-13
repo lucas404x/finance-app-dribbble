@@ -4,8 +4,8 @@ import '../../../constants/app_assets.dart';
 import '../../../constants/app_colors.dart';
 import '../../../widgets/profile_picture.dart';
 
-class HeaderWithProfile extends StatelessWidget {
-  const HeaderWithProfile({Key? key}) : super(key: key);
+class HomeHeaderWithProfile extends StatelessWidget {
+  const HomeHeaderWithProfile({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
