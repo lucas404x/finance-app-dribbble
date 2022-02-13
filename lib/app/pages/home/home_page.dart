@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import 'widgets/home_body_cards.dart';
 import 'widgets/home_header_with_profile.dart';
 
 class HomePage extends StatelessWidget {
@@ -13,7 +14,13 @@ class HomePage extends StatelessWidget {
         padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 32),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
-          children: const [HomeHeaderWithProfile()],
+          children: const [
+            HomeHeaderWithProfile(),
+            Padding(
+              padding: EdgeInsets.symmetric(vertical: 24),
+              child: HomeBodyCards(),
+            )
+          ],
         ),
       )),
     );
