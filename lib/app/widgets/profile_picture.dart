@@ -15,7 +15,7 @@ class ProfilePicture extends StatelessWidget {
           color: backgroundColor,
           borderRadius: const BorderRadius.all(Radius.circular(20))),
       child: Padding(
-        padding: const EdgeInsets.all(16),
+        padding: const EdgeInsets.all(8),
         child: Center(
           child: Image.asset(
             image,
