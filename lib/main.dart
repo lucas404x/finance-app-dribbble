@@ -17,7 +17,9 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       home: const HomePage(),
       theme: ThemeData(
-          textTheme: GoogleFonts.openSansTextTheme(),
+          textTheme: GoogleFonts.openSansTextTheme().apply(
+              displayColor: AppColors.ebonyClay,
+              bodyColor: AppColors.ebonyClay),
           backgroundColor: AppColors.backgroundColor,
           scaffoldBackgroundColor: AppColors.backgroundColor),
     );
