@@ -13,6 +13,14 @@ class CreditCardBase extends StatelessWidget {
     return Container(
       decoration: BoxDecoration(
           color: backgroundColor,
+          boxShadow: [
+            BoxShadow(
+              offset: Offset.zero,
+              color: Colors.black.withOpacity(.1),
+              blurRadius: 10,
+              spreadRadius: 5,
+            )
+          ],
           borderRadius: const BorderRadius.all(Radius.circular(24))),
       child: child,
     );

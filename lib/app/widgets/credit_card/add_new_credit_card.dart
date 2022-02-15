@@ -26,7 +26,7 @@ class AddNewCreditCard extends StatelessWidget {
                   style: _textTheme.headline4?.copyWith(
                       color: Colors.white, fontWeight: FontWeight.bold)),
             ]),
-            const SizedBox(height: 84),
+            const SizedBox(height: 100),
             Button(
                 backgroundColor: AppColors.ebonyClay,
                 child: Image.asset(
