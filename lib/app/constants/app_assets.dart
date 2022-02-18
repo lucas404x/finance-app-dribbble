@@ -6,6 +6,11 @@ class AppAssets {
     'assets/memojis/3.png',
     'assets/memojis/4.png',
     'assets/memojis/5.png',
+    'assets/memojis/6.png',
+    'assets/memojis/2.png',
+    'assets/memojis/3.png',
+    'assets/memojis/4.png',
+    'assets/memojis/5.png',
     'assets/memojis/6.png'
   ];
 }

@@ -14,9 +14,8 @@ class HomeTransferSection extends StatelessWidget {
       children: [
         Text('Transfer to',
             style: _themeText.headline5?.copyWith(fontWeight: FontWeight.bold)),
-        TextButton(
-            style: TextButton.styleFrom(padding: EdgeInsets.zero),
-            onPressed: () {},
+        GestureDetector(
+            onTap: () {},
             child: Text('+ Add new',
                 style: _themeText.bodyText1?.copyWith(
                     fontWeight: FontWeight.bold, color: AppColors.purple)))

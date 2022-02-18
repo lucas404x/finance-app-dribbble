@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'widgets/home_body_cards.dart';
 import 'widgets/home_header_with_profile.dart';
+import 'widgets/home_list_friends.dart';
 import 'widgets/home_transfer_section.dart';
 
 class HomePage extends StatelessWidget {
@@ -21,6 +22,7 @@ class HomePage extends StatelessWidget {
             Padding(
                 padding: EdgeInsets.only(top: 24),
                 child: HomeTransferSection()),
+            Padding(padding: EdgeInsets.only(top: 24), child: HomeListFriends())
           ],
         ),
       )),
