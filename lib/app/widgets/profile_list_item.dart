@@ -15,6 +15,7 @@ class ProfileListItem extends StatelessWidget {
     final Color _profileColor = Color(profile.color);
 
     return Column(
+      crossAxisAlignment: CrossAxisAlignment.center,
       children: [
         Stack(
           children: [
@@ -35,6 +36,14 @@ class ProfileListItem extends StatelessWidget {
               gradient: LinearGradient(colors: [_profileColor, _profileColor]),
             )
           ],
+        ),
+        const SizedBox(height: 8),
+        Text(
+          profile.name,
+          style: Theme.of(context)
+              .textTheme
+              .bodyText1
+              ?.copyWith(fontWeight: FontWeight.bold),
         )
       ],
     );
