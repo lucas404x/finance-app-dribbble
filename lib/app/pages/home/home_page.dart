@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
-import '../../constants/app_assets.dart';
+import '../../core/models/profile_model.dart';
+import '../../core/repositories/profile_repository.dart';
 import '../../widgets/profile_list.dart';
 import 'widgets/home_body_cards.dart';
 import 'widgets/home_header_with_profile.dart';
@@ -11,7 +12,7 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    const List<String> _profiles = AppAssets.memojisFriends;
+    final List<ProfileModel> _profiles = ProfileRepository().getAllProfiles();
 
     return Scaffold(
       body: SafeArea(
@@ -19,14 +20,15 @@ class HomePage extends StatelessWidget {
         padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 32),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
-          children: const [
-            HomeHeaderWithProfile(),
-            Padding(padding: EdgeInsets.only(top: 24), child: HomeBodyCards()),
-            Padding(
+          children: [
+            const HomeHeaderWithProfile(),
+            const Padding(
+                padding: EdgeInsets.only(top: 24), child: HomeBodyCards()),
+            const Padding(
                 padding: EdgeInsets.only(top: 24),
                 child: HomeTransferSection()),
             Padding(
-                padding: EdgeInsets.only(top: 24),
+                padding: const EdgeInsets.only(top: 24),
                 child: ProfileList(profiles: _profiles))
           ],
         ),

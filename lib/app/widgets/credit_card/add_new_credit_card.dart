@@ -1,6 +1,6 @@
-import 'package:financial_dribbble_app/app/constants/app_assets.dart';
 import 'package:flutter/material.dart';
 
+import '../../constants/app_assets.dart';
 import '../../constants/app_colors.dart';
 import '../button.dart';
 import 'credit_card_base.dart';

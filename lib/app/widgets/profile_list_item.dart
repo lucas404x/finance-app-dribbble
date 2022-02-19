@@ -1,31 +1,40 @@
 import 'package:flutter/material.dart';
 
+import '../core/models/profile_model.dart';
 import 'profile_picture.dart';
 
 class ProfileListItem extends StatelessWidget {
-  final String profile;
+  final ProfileModel profile;
 
   const ProfileListItem({Key? key, required this.profile}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Stack(
+    const double _size = 72.0;
+    const double _radius = 20.0;
+    final Color _profileColor = Color(profile.color);
+
+    return Column(
       children: [
-        Positioned(
-            left: 8,
-            top: 8,
-            child: ProfilePicture(
-                width: 72,
-                height: 72,
-                borderRadius: 24,
-                profileSize: 40,
-                image: profile,
-                backgroundColor: Colors.blue)),
-        const _ProfileBorder(
-          strokeWidth: 2,
-          strokeRadius: 24,
-          size: 72,
-          gradient: LinearGradient(colors: [Colors.blue, Colors.lightBlue]),
+        Stack(
+          children: [
+            Positioned(
+                left: 8,
+                top: 8,
+                child: ProfilePicture(
+                    width: _size,
+                    height: _size,
+                    borderRadius: _radius,
+                    profileSize: 40,
+                    image: profile.image,
+                    backgroundColor: _profileColor)),
+            _ProfileBorder(
+              strokeWidth: 2.0,
+              strokeRadius: _radius,
+              size: _size,
+              gradient: LinearGradient(colors: [_profileColor, _profileColor]),
+            )
+          ],
         )
       ],
     );
