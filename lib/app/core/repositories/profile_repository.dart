@@ -1,13 +1,13 @@
+import '../interfaces/repository_interface.dart';
 import 'package:flutter/material.dart';
 
 import '../../constants/app_assets.dart';
 import '../../constants/app_colors.dart';
-import '../interfaces/profile_repository_interface.dart';
 import '../models/profile_model.dart';
 
-class ProfileRepository implements IProfileRepository {
+class ProfileRepository implements IRepository<ProfileModel> {
   @override
-  List<ProfileModel> getAllProfiles() {
+  List<ProfileModel> getAll() {
     // TODO: Create JSON and load all objects
     return [
       ProfileModel(
