@@ -1,7 +1,7 @@
-import 'package:financial_dribbble_app/app/pages/root/widgets/custom_bottom_navigator.dart';
 import 'package:flutter/material.dart';
 
 import '../home/home_page.dart';
+import 'widgets/custom_bottom_navigator/custom_bottom_navigator.dart';
 
 class RootPage extends StatefulWidget {
   const RootPage({Key? key}) : super(key: key);
@@ -16,7 +16,7 @@ class _RootPageState extends State<RootPage> {
 
   @override
   void initState() {
-    pages = const [HomePage()];
+    pages = [const HomePage(), Container(), Container(), Container()];
     super.initState();
   }
 
@@ -29,8 +29,26 @@ class _RootPageState extends State<RootPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      bottomNavigationBar: const CustomBottomNavigator(),
-      body: pages[_currentIndex],
+      extendBody: true,
+      body: Stack(
+        children: [
+          Padding(
+            padding: const EdgeInsets.only(bottom: 64),
+            child: pages[_currentIndex],
+          ),
+          Align(
+            alignment: Alignment.bottomCenter,
+            child: CustomBottomNavigator(
+              currentIndex: _currentIndex,
+              onItemSelected: (int index) {
+                setState(() {
+                  _currentIndex = index;
+                });
+              },
+            ),
+          )
+        ],
+      ),
     );
   }
 }
