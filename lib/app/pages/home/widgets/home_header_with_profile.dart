@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../../../constants/app_assets.dart';
 import '../../../constants/app_colors.dart';
-import '../../../widgets/profile_picture.dart';
+import '../../../widgets/profile/profile_picture.dart';
 
 class HomeHeaderWithProfile extends StatelessWidget {
   const HomeHeaderWithProfile({Key? key}) : super(key: key);

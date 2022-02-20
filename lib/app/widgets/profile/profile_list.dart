@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../core/models/profile_model.dart';
+import '../../core/models/profile_model.dart';
 import 'profile_list_item.dart';
 
 class ProfileList extends StatelessWidget {

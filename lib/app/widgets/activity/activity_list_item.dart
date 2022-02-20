@@ -1,7 +1,7 @@
-import 'package:financial_dribbble_app/app/widgets/activity_profile.dart';
 import 'package:flutter/material.dart';
 
-import '../core/models/activity_model.dart';
+import '../../core/models/activity_model.dart';
+import './activity_profile.dart';
 
 class ActivityListItem extends StatelessWidget {
   final ActivityModel activityModel;
