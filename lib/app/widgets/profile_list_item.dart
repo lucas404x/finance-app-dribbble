@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../core/models/profile_model.dart';
+import '../core/utils/color_utils.dart';
 import 'profile_picture.dart';
 
 class ProfileListItem extends StatelessWidget {
@@ -33,7 +34,7 @@ class ProfileListItem extends StatelessWidget {
               strokeWidth: 2.0,
               strokeRadius: _radius,
               size: _size,
-              gradient: LinearGradient(colors: [_profileColor, _profileColor]),
+              gradient: generateGradientColor(_profileColor),
             )
           ],
         ),
