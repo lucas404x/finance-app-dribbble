@@ -45,9 +45,12 @@ class ActivityListItem extends StatelessWidget {
                 ],
               ),
               const SizedBox(height: 8),
-              Text(
-                'From the card **** ${activityModel.lastDigitsCard}',
-                style: _textTheme.subtitle2,
+              Opacity(
+                opacity: 0.5,
+                child: Text(
+                  'From the card **** ${activityModel.lastDigitsCard}',
+                  style: _textTheme.subtitle2,
+                ),
               ),
             ],
           ),
