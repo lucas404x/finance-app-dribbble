@@ -1,3 +1,4 @@
+import 'package:financial_dribbble_app/app/pages/transfer/transfer_page.dart';
 import 'package:flutter/material.dart';
 
 import '../../core/models/profile_model.dart';
@@ -16,7 +17,18 @@ class ProfileList extends StatelessWidget {
         physics: const BouncingScrollPhysics(),
         itemBuilder: (context, index) => Padding(
           padding: const EdgeInsets.only(right: 16),
-          child: ProfileListItem(profile: profiles[index]),
+          child: GestureDetector(
+            onTap: () => Navigator.of(context).push(
+              MaterialPageRoute(
+                builder: (context) => TransferPage(
+                  profileId: profiles[index].id
+                ),
+              ),
+            ),
+            child: ProfileListItem(
+              profile: profiles[index],
+            ),
+          ),
         ),
         itemCount: profiles.length,
         clipBehavior: Clip.none,
