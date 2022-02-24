@@ -16,6 +16,7 @@ class ProfileListItem extends StatelessWidget {
     final Color _profileColor = Color(profile.color);
 
     return Column(
+      mainAxisSize: MainAxisSize.min,
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
         Stack(

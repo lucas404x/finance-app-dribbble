@@ -1,7 +1,7 @@
-import 'package:financial_dribbble_app/app/pages/transfer/transfer_page.dart';
 import 'package:flutter/material.dart';
 
 import '../../core/models/profile_model.dart';
+import '../../pages/transfer/transfer_page.dart';
 import 'profile_list_item.dart';
 
 class ProfileList extends StatelessWidget {
