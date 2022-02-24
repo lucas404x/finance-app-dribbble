@@ -11,18 +11,18 @@ class RootPage extends StatefulWidget {
 }
 
 class _RootPageState extends State<RootPage> {
-  late final List<Widget> pages;
+  late final List<Widget> _pages;
   int _currentIndex = 0;
 
   @override
   void initState() {
-    pages = [const HomePage(), Container(), Container(), Container()];
+    _pages = [const HomePage(), Container(), Container(), Container()];
     super.initState();
   }
 
   @override
   void dispose() {
-    pages.clear();
+    _pages.clear();
     super.dispose();
   }
 
@@ -34,7 +34,7 @@ class _RootPageState extends State<RootPage> {
         children: [
           Padding(
             padding: const EdgeInsets.only(bottom: 64),
-            child: pages[_currentIndex],
+            child: _pages[_currentIndex],
           ),
           Align(
             alignment: Alignment.bottomCenter,
