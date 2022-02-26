@@ -17,6 +17,6 @@ class Button extends StatelessWidget {
                 borderRadius: BorderRadius.all(Radius.circular(24))),
             primary: backgroundColor),
         onPressed: () {},
-        child: Center(child: child,));
+        child: child);
   }
 }
