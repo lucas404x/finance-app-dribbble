@@ -12,7 +12,7 @@ class ProfileList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 120,
+      height: 125,
       child: ListView.builder(
         physics: const BouncingScrollPhysics(),
         itemBuilder: (context, index) => Padding(

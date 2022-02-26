@@ -23,7 +23,7 @@ class ProfileListWheel extends StatelessWidget {
       width: double.infinity,
       child: CarouselSlider.builder(
         options: CarouselOptions(
-          height: 120,
+          height: 110,
             initialPage: initialPage,
             viewportFraction: 0.35,
             onPageChanged: onPageChanged),

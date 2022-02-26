@@ -11,8 +11,8 @@ class ProfileListItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    const double _size = 72.0;
-    const double _radius = 20.0;
+    const double _size = 54.0;
+    const double _radius = 12.0;
     final Color _profileColor = Color(profile.color);
 
     return Column(
@@ -28,7 +28,7 @@ class ProfileListItem extends StatelessWidget {
                     width: _size,
                     height: _size,
                     borderRadius: _radius,
-                    profileSize: 40,
+                    profileSize: 30,
                     image: profile.image,
                     backgroundColor: _profileColor)),
             _ProfileBorder(
@@ -39,7 +39,7 @@ class ProfileListItem extends StatelessWidget {
             )
           ],
         ),
-        const SizedBox(height: 8),
+        const SizedBox(height: 16),
         Text(
           profile.name,
           style: Theme.of(context)
