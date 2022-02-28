@@ -5,12 +5,14 @@ import 'keyboard_key.dart';
 
 class KeyboardTransfer extends StatelessWidget {
   final void Function(String) onKeyPressed;
+  final void Function() onDeleteKeyPressed;
   final void Function() onConfirmPressed;
 
   const KeyboardTransfer({
     Key? key,
     required this.onKeyPressed,
     required this.onConfirmPressed,
+    required this.onDeleteKeyPressed,
   }) : super(key: key);
 
   @override
@@ -35,7 +37,7 @@ class KeyboardTransfer extends StatelessWidget {
           KeyboardKey(char: '9', onKeyPressed: onKeyPressed)
         ]),
         TableRow(children: [
-          KeyboardKey(char: '⌫', onKeyPressed: onKeyPressed),
+          KeyboardKey(char: '⌫', onKeyPressed: (_) => onDeleteKeyPressed()),
           KeyboardKey(char: '0', onKeyPressed: onKeyPressed),
           KeyboardConfirmButton(onPressed: onConfirmPressed),
         ]),

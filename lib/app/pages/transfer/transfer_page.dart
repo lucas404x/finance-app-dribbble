@@ -4,7 +4,7 @@ import '../../core/helpers/scroll_behavior_without_glow.dart';
 import '../../core/models/profile_model.dart';
 import '../../core/repositories/profile_repository.dart';
 import '../../widgets/profile/profile_list_wheel.dart';
-import 'widgets/keyboard_transfer/keyboard_transfer.dart';
+import 'widgets/input_transfer/input/input_transfer_page.dart';
 import 'widgets/transfer_page_header.dart';
 
 class TransferPage extends StatefulWidget {
@@ -19,7 +19,6 @@ class TransferPage extends StatefulWidget {
 class _TransferPageState extends State<TransferPage> {
   late final ProfileRepository _profileRepository;
   late final List<ProfileModel> _profiles;
-  late double _currentPaymentValue = 0.0;
   late int _currentPage;
 
   @override
@@ -35,7 +34,6 @@ class _TransferPageState extends State<TransferPage> {
 
   @override
   Widget build(BuildContext context) {
-    final _textTheme = Theme.of(context).textTheme;
     return Scaffold(
       body: SafeArea(
         child: ScrollConfiguration(
@@ -59,26 +57,10 @@ class _TransferPageState extends State<TransferPage> {
                   },
                 ),
                 const SizedBox(height: 32.0),
-                Center(
-                  child: Text(
-                    '\$$_currentPaymentValue',
-                    style: _textTheme.headline5?.copyWith(
-                      fontWeight: FontWeight.bold,
-                    ),
-                  ),
-                ),
-                const Padding(
-                  padding: EdgeInsets.all(16.0),
-                  child: Divider(),
-                ),
-                Padding(
-                  padding: const EdgeInsets.symmetric(vertical: 16.0),
-                  child: KeyboardTransfer(
-                    onConfirmPressed: () {},
-                    onKeyPressed: (String char) {
-                      debugPrint(char);
-                    },
-                  ),
+                InputTransfer(
+                  onConfirmPressed: (String value) {
+                    debugPrint(value);
+                  },
                 ),
               ],
             ),

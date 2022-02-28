@@ -16,7 +16,7 @@ class Button extends StatelessWidget {
             shape: const RoundedRectangleBorder(
                 borderRadius: BorderRadius.all(Radius.circular(24))),
             primary: backgroundColor),
-        onPressed: () {},
+        onPressed: onPressed,
         child: child);
   }
 }
