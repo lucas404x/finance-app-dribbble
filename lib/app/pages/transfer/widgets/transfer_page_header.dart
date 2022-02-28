@@ -9,14 +9,14 @@ class TransferPageHeader extends StatelessWidget {
     TextTheme _textTheme = Theme.of(context).textTheme;
 
     return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         const CustomBackButton(),
+        const Spacer(),
         Text(
           'Transfer',
           style: _textTheme.headline6,
         ),
-        Container()
+        const Spacer()
       ],
     );
   }
