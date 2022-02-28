@@ -4,7 +4,7 @@ import '../../core/helpers/scroll_behavior_without_glow.dart';
 import '../../core/models/profile_model.dart';
 import '../../core/repositories/profile_repository.dart';
 import '../../widgets/profile/profile_list_wheel.dart';
-import 'widgets/keyboard_transfer.dart';
+import 'widgets/keyboard_transfer/keyboard_transfer.dart';
 import 'widgets/transfer_page_header.dart';
 
 class TransferPage extends StatefulWidget {
@@ -71,9 +71,14 @@ class _TransferPageState extends State<TransferPage> {
                   padding: EdgeInsets.all(16.0),
                   child: Divider(),
                 ),
-                const Padding(
-                  padding: EdgeInsets.symmetric(vertical: 16.0),
-                  child: KeyboardTransfer(),
+                Padding(
+                  padding: const EdgeInsets.symmetric(vertical: 16.0),
+                  child: KeyboardTransfer(
+                    onConfirmPressed: () {},
+                    onKeyPressed: (String char) {
+                      debugPrint(char);
+                    },
+                  ),
                 ),
               ],
             ),
