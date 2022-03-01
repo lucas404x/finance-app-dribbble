@@ -1,6 +1,7 @@
 class AppAssets {
   static const String addCreditCardIcon = 'assets/icons/add_credit_card.png';
   static const String memojiProfile = 'assets/memojis/1.png';
+  static const String visaLogo = 'assets/icons/visa.svg';
   static const List<String> memojisFriends = [
     'assets/memojis/2.png',
     'assets/memojis/3.png',
